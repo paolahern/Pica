@@ -1,9 +1,9 @@
-const config = {
+const config ={
   type: Phaser.AUTO,
   parent: 'game',
   width: 360,
   height: 640,
-  backgroundColor: '#222',
+  backgroundColor: '#ffda89',
   scale: {
     mode: Phaser.Scale.FIT
   },
@@ -17,7 +17,7 @@ const game = new Phaser.Game(config);
 
 let score = 0;
 let personaje;
-let personajes = ['personaje.png', 'personaje2.png']; // lista de personajes
+let personajes = [personaje1.png, personaje2.png]; // lista de personajes
 let indexPersonaje = 0;
 
 function preload(){
@@ -33,14 +33,13 @@ function create() {
     // reiniciar score
     score = 0;
     document.getElementById("score").innerText = "Puntos: 0";
-    document.getElementById("titulo").innerText = "Mini Tap Game";
+    document.getElementById("titulo").innerText = "Toka al simi ";
 
     // agregar personaje inicial
     personaje = this.add.image(200, 200, 'player1');
     personaje.setInteractive();
     personaje.setScale(0.3);
-
-    personaje.on('pointerdown', () => {
+  personaje.on('pointerdown', () => {
         score++;
         document.getElementById("score").innerText = "Puntos: " + score;
 
@@ -48,7 +47,7 @@ function create() {
         personaje.y = Phaser.Math.Between(50, 590);
 
         if(score === 10){
-            document.getElementById("titulo").innerText = "¡Ganaste!";
+            document.getElementById("titulo").innerText = "¡YEAAAAA🗣️🗣️!";
             personaje.disableInteractive();
             scene.time.delayedCall(2000, () => {
                 scene.scene.restart();
@@ -56,8 +55,8 @@ function create() {
         }
     });
 
-    // Botón para cambiar personaje
-    document.getElementById("cambiarPersonaje").addEventListener('click', () => {
+    // Boton para cambiar psj
+    document.getElementById("Kambiar Simi").addEventListener('click', () => {
         // cambiar índice al siguiente personaje
         indexPersonaje = (indexPersonaje + 1) % personajes.length;
         personaje.setTexture('player' + (indexPersonaje + 1));
