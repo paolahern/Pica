@@ -1,6 +1,6 @@
 {
   "name": "Atrapa El Personaje",
-  "short_name": "Pica",
+  "short_name": "Ouch",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#111111",
@@ -19,3 +19,4 @@
     }
   ]
 }
+
