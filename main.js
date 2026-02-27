@@ -18,14 +18,12 @@ const game = new Phaser.Game(config);
 let score = 0;
 let personaje;
 
-// ✅ nombres correctos como texto
 let personajes = ['personaje.png', 'personaje2.png'];
 
 let indexPersonaje = 0;
 
 function preload(){
 
-    // cargar imágenes correctamente
     this.load.image('player1', personajes[0]);
     this.load.image('player2', personajes[1]);
 
@@ -36,12 +34,15 @@ function create() {
   const scene = this;
 
     score = 0;
-    document.getElementById("score").innerText = "Puntos: 0";
-    document.getElementById("titulo").innerText = "Toca al personaje ";
 
-    personaje = this.add.image(200, 200, 'player1');
+    document.getElementById("score").innerText = "Puntos: 0";
+
+    document.getElementById("titulo").innerText = "Toca al personaje";
+
+    personaje = this.add.image(180, 320, 'player1');
 
     personaje.setInteractive();
+
     personaje.setScale(0.3);
 
     personaje.on('pointerdown', () => {
@@ -67,8 +68,7 @@ function create() {
 
     });
 
-    // botón cambiar personaje
-    document.getElementById("Kambiar Simi").addEventListener('click', () => {
+    document.getElementById("cambiarPersonaje").addEventListener('click', () => {
 
         indexPersonaje = (indexPersonaje + 1) % personajes.length;
 
