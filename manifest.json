@@ -1,22 +1,21 @@
 {
-  "name": "Mini Tap Game",
-  "short_name": "TapGame",
+  "name": "Atrapa El Personaje",
+  "short_name": "Pica",
   "start_url": "./index.html",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#111111",
+  "theme_color": "#111111",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icono.jpg",
+      "src": "icono.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "icono.jpg",
+      "src": "icono.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }
