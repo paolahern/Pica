@@ -33,7 +33,7 @@ function create() {
     // reiniciar score
     score = 0;
     document.getElementById("score").innerText = "Puntos: 0";
-    document.getElementById("titulo").innerText = "Toka al simi ";
+    document.getElementById("titulo").innerText = "Toca al personaje ";
 
     // agregar personaje inicial
     personaje = this.add.image(200, 200, 'player1');
@@ -47,7 +47,7 @@ function create() {
         personaje.y = Phaser.Math.Between(50, 590);
 
         if(score === 10){
-            document.getElementById("titulo").innerText = "¡YEAAAAA🗣️🗣️!";
+            document.getElementById("titulo").innerText = "¡Ganaste!";
             personaje.disableInteractive();
             scene.time.delayedCall(2000, () => {
                 scene.scene.restart();
@@ -62,3 +62,4 @@ function create() {
         personaje.setTexture('player' + (indexPersonaje + 1));
     });
 }
+
